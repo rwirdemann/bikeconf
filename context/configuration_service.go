@@ -3,25 +3,26 @@ package context
 import (
 	"github.com/rwirdemann/bikeage/application/domain"
 	"github.com/rwirdemann/bikeage/ports/in"
+	out2 "github.com/rwirdemann/bikeage/ports/out"
 )
 
 type ConfigurationService struct{}
 
-func NewConfigurationService() in.ConfigurationService {
+func NewConfigurationService(bikeRepo out2.BikeRepository) in.ConfigurationService {
 	return ConfigurationService{}
 }
 
-func (ConfigurationService) GetConfigurations() ([]domain.Configuration, error) {
+func (cs ConfigurationService) GetAll() ([]domain.Configuration, error) {
 	// TODO implement me
 	panic("implement me")
 }
 
-func (ConfigurationService) ValidateConfiguration(c domain.Configuration) bool {
+func (cs ConfigurationService) ValidateConfiguration(c domain.Configuration) bool {
 	// TODO implement me
 	panic("implement me")
 }
 
-func (ConfigurationService) ResolveConfiguration(c domain.Configuration) ([]domain.Solution, error) {
+func (cs ConfigurationService) ResolveConfiguration(c domain.Configuration) []domain.Solution {
 	// TODO implement me
 	panic("implement me")
 }

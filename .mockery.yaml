@@ -1,0 +1,8 @@
+with-expecter: true
+packages:
+  github.com/rwirdemann/bikeage/ports/out:
+    # place your package-specific config here
+    config:
+    interfaces:
+      # select the interfaces you want mocked
+      SATResolver:
