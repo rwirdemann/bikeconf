@@ -9,8 +9,9 @@ import (
 )
 
 func TestResolve(t *testing.T) {
+	br := out.NewMockBikeRepository(t)
 	sr := out.NewMockSATResolver(t)
-	cs := context.NewConfigurationService(sr)
+	cs := context.NewConfigurationService(br, sr)
 	fc := failedConfig()
 
 	assert.False(t, cs.ValidateConfiguration(fc))

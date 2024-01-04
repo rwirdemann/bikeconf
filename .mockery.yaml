@@ -6,3 +6,4 @@ packages:
     interfaces:
       # select the interfaces you want mocked
       SATResolver:
+      BikeRepository:

@@ -8,7 +8,7 @@ import (
 
 type ConfigurationService struct{}
 
-func NewConfigurationService(bikeRepo out2.BikeRepository) in.ConfigurationService {
+func NewConfigurationService(bikeRepo out2.BikeRepository, sat out2.SATResolver) in.ConfigurationService {
 	return ConfigurationService{}
 }
 
