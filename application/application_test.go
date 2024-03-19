@@ -21,5 +21,12 @@ func TestResolve(t *testing.T) {
 }
 
 func failedConfig() domain.Configuration {
-	return domain.Configuration{}
+	return domain.Configuration{
+		Manufacturer: "Rose",
+		Model:        "Backroad",
+		Shift: domain.Shift{
+			Manufacturer: "SRAM",
+			Series:       "Red",
+		},
+	}
 }

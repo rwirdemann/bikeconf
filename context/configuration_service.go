@@ -18,11 +18,15 @@ func (cs ConfigurationService) GetAll() ([]domain.Configuration, error) {
 }
 
 func (cs ConfigurationService) ValidateConfiguration(c domain.Configuration) bool {
-	// TODO implement me
-	panic("implement me")
+	if c.Manufacturer == "Rose" && c.Model == "Backroad" {
+		if c.Shift.Manufacturer == "SRAM" {
+			return false
+		}
+	}
+
+	return true
 }
 
 func (cs ConfigurationService) ResolveConfiguration(c domain.Configuration) []domain.Solution {
-	// TODO implement me
-	panic("implement me")
+	return []domain.Solution{}
 }
